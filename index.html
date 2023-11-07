@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+        /* ######################## Navbar Style ################## */
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            /* 10px setting default */
+            font-size:62.5%;
+            /* 16px = 100 */
+        }
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+        /* #########################Utility class###################### */
+        .btn{
+            text-decoration: none;
+            /* margin-left: 20px; */
+            background-color: green;
+            border: 2px solid magenta;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            color: lightcyan;
+            font-weight: 700;
+            border-radius: 25px;
+            transition: all 2s ease-in-out;
+            font-size: 1.8rem;
+        }
+
+        .btn:hover{
+            background-color: magenta;
+            color: green;
+            border: 2px solid green;
+        }
+        /* ####################################Header Class############### */
+        .header{
+
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            position: relative;
+        }
+
+        .navbar{
+            /* border: 2px solid green; */
+            width:90%;
+            margin: auto;
+            overflow:hidden;
+        }
+        .navbar .logo{
+            /* border: 2px solid black; */
+            float:left;
+            color: coral;
+            padding: 2rem;
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow:2px 2px 10px grey;
+        }
+        .navbar .nav-items{
+            /* border: 2px solid black; */
+            float: right;
+            padding: 2rem;
+            color: white;
+        }
+
+        .navbar .nav-item{
+            display: inline-block;
+            margin-left:2rem;
+        }
+
+        .navbar a{
+            color: white;
+            text-decoration:none;
+            padding: 0.5rem 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .header-content h1{
+            color:rgb(88, 5, 78);
+        text-transform:uppercase;
+        font-weight:700;
+        margin-bottom:5rem;
+        font-size:7rem;
+        text-shadow:2px 2px 10px rgb(243, 243, 243);
+        }
+
+        .navbar a:hover{
+            border-bottom:2px solid white;
+        }        
+
+        .header-content{
+            width: 35%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        /* ################main############# */
+        .main{
+            background-color: rgb(8, 8, 91);
+            padding: 8rem 0;
+        }
+        .row{
+            height: 30rem;
+            /* border: 4px solid green; */
+            overflow: hidden;
+            margin-bottom: 5rem ;
+            background-color: #cfe5ed;
+            box-shadow: 0px 6px 8px red, 0px 6px 8px red;
+        }
+
+        .container{
+            width: 90%;
+            margin: auto;
+        }
+        /* ###############################main first row############################### */
+        
+        .l-imagebox{
+            width:50%;
+            /* border: 2px solid red; */
+            float: left; 
+            height: 100%;
+        }
+        .l-imagebox img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }    
+        .r-text-box{
+            width: 50%;
+            /* border: 2px solid blue; */
+            float: right;
+            padding: 3rem;
+        }
+        .r-text-box h2{
+            padding: 2rem;
+            font-size: 3rem;
+        }  
+        .r-text-box p{
+            padding: 2rem;
+            font-size: 2rem;
+        } 
+        .r-text-box a{
+            margin-top: 2rem;
+        }     
+        /* ############## main second row ############# */
+         .r-imagebox{ 
+            width:50%;
+            /* border: 2px solid red; */
+            float: right; 
+            height: 100%;
+        } 
+        .r-imagebox img{ 
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .l-text-box{
+            width: 50%;
+            /* border: 2px solid blue; */
+            float: left;
+            padding: 3rem;
+        }
+        .l-text-box h2{
+            padding: 2rem;
+            font-size: 3rem;
+        }  
+        .l-text-box p{
+            padding: 2rem;
+            font-size: 2rem;
+        }
+        .footer{
+            padding: 3rem;
+            background-color:#cfe5ed;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 480px){
+            html{
+                font-size: 37.5%;
+            }
+
+            .container{
+                width: 85%;
+                margin: auto;
+            }
+
+            .header-content{
+                height: 35%;
+                width: 50%;
+            }
+            .row{
+                height: auto;
+            }
+            .l-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .r-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        }
+            .r-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .l-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        } 
+        .r-imagebox img{ 
+            height: 200px;
+        }
+        .l-imagebox img{ 
+            height: 200px;
+        }
+        }
+
+        @media(min-width:481px) and (max-width:600px){
+    html{
+        font-size:42%;
+    }
+    .container{
+        width: 75%;
+        margin: auto;
+    }
+    .header-content{
+                height: 35%;
+                width: 50%;
+            }
+            .row{
+                height: auto;
+            }
+            .l-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .r-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        }
+            .r-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .l-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        } 
+        .r-imagebox img{ 
+            height: 200px;
+        }
+        .l-imagebox img{ 
+            height: 200px;
+        }
+    }
+        @media(min-width:601px) and (max-width:768px){
+    html{
+        font-size:50%;
+    }
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+    .header-content{
+                height: 35%;
+                width: 50%;
+            }
+            .row{
+                height: auto;
+            }
+            .l-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .r-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        }
+            .r-imagebox{
+                float: none;
+                height: 50%;
+                width: 100%;
+            }
+            .l-text-box{
+            width: 100%;
+            /* border: 2px solid blue; */
+            float: none;
+            height: 50%;
+        } 
+        .r-imagebox img{ 
+            height: 200px;
+        }
+        .l-imagebox img{ 
+            height: 200px;
+        }
+        }
+    </style>
+
+</head>
+<!-- ****************************body***************************** -->
+<body>
+    <!-- ****************************header**************************** -->
+    <header class="header">
+        <nav class="navbar container">
+            
+            <h1 class="logo">AG</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <br><br><br>
+        <div class="header-content"> 
+            <h1 class="text-shadow">
+                GAMING
+            </h1>
+            <br><br><br>
+            <a href="#playgame" class="btn">
+                PLAY
+            </a>
+            
+        </div>   
+    </header>
+
+
+    <main class="main" id="playgame">
+    <section class="container">
+    <div class="row">
+        <div class="l-imagebox">
+            <img src="../image/scratch.jpg">
+        </div>
+        <div class="r-text-box">
+            <h2> Collect the letters</h2>
+            <p> In this game, you have to press the space bar to jumb and jump ove the rocks and jump to collect the letter.</p>
+            <a href="collecttheletters.html"class="btn">Play Game</a>
+        </div>
+    
+    </div>
+     <div class="row">
+        <div class="r-imagebox">
+            <img src="../image/scratch2.jpg">
+        </div>
+        <div class="l-text-box">
+             <h2> Gun and Bullet</h2>
+             <p class="paragraph"> In this game you have to press space bar to release a bullet to kill the dragon.</p>
+             <a href="gunandbullet.html"class="btn">Play Game</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="l-imagebox">
+            <img src="../image/scratch3.jpg">
+        </div>
+        <div class="r-text-box">
+            <h2>Space</h2>
+            <p>In this game, you have fly through space in a thrilling expidition</p>
+            <a href="space.html"class="btn">Play Game</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="r-imagebox">
+            <img src="../image/scratch4.jpg">
+        </div>
+        <div class="l-text-box">
+            <h2>Fruit Basket</h2>
+            <p>In this game, you bhave to collect the apples in the basket so they don't go to waste</p>
+            <a href="fruitbasket.html" class="btn">Play Game</a>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    </div>
+</section>
+    </main>
+
+    <footer class="footer">
+        <p>Akshar Games © all rights reserved</p>
+    
+    </footer>
+    <!-- The row 2 add the href and give a class to the href h2 and paragraph tag in the second row need to be given CSS, add 
+    the third row image on the left and the text box on the right -->
+</body>
+</html>
