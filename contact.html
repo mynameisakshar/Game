@@ -129,6 +129,7 @@
             width: 90%;
             margin: auto;
             max-width: 1200px;
+            /* border: 2px solid saddlebrown; */
         }
         /* ###############################main first row############################### */
         
@@ -190,6 +191,99 @@
             padding: 2rem;
             font-size: 2rem;
         }
+        /* #################################################about us#################################################################3 */
+       .about-us{
+        /* border: 10px solid green; */
+        /* width: 80%; */
+        background-color: lightblue;
+       }
+        .about-parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* border: 2px solid coral; */
+}
+
+.image-text{
+    /* border: 10px solid red; */
+    width: 100%;
+}
+
+.image-text img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-text{
+    /* border: 2px solid blue; */
+    width: 100%;
+    padding: 20px 10px;
+    color: darkblue;
+}
+
+.about-text h1{
+    font-size: 3rem;
+    margin: 5px 5px;
+}
+.about-text h2{
+    font-size: 2.5rem;
+    margin: 15px 15px;
+}
+
+.about-text p{
+    line-height: 1.5;
+    font-size: 1.6rem;
+    margin: 15px;
+}
+
+.contact-wrapper h2{
+    /* border: 4px solid red; */
+    text-align: center;
+    font-size:2.5rem;
+}
+
+.contact-wrapper{
+    border-radius: 5px;
+    background-color:rgb(206, 227, 233);
+    padding: 40px 30px;
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+
+
+input[type=text],[type=email]{
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+textarea{
+    width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-top: 10px;
+margin-bottom: 20px;   
+}
+
+input[type=submit]{
+  width: 100%;
+  background-color: #3f7dc9;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 0px;
+}
+
         .footer{
             padding: 3rem;
             background-color:#cfe5ed;
@@ -334,6 +428,20 @@
             height: 200px;
         }
         }
+        .textarea{
+            width: 300px;
+            height: 300px;
+        }
+        label{
+            color: white;
+            font-size: 2rem;
+        }
+        .button{
+            background-color: green;
+            width: 25%;
+            height: 20px;
+            border-radius: 2.5px;
+        }
     </style>
 
 </head>
@@ -366,55 +474,25 @@
 
     <main class="main" id="playgame">
     <section class="container">
-    <div class="row">
-        <div class="l-imagebox">
-            <img src="image/scratch.jpg">
-        </div>
-        <div class="r-text-box">
-            <h2> Collect the letters</h2>
-            <p> In this game, you have to press the space bar to jumb and jump ove the rocks and jump to collect the letter.</p>
-            <a href="collecttheletter.html"class="btn">Play Game</a>
-        </div>
+      <!-- in the contact form, name, email and a text area for message and then a submit button -->
+      
+      <div class="contact-wrapper">
+        <h2>Connect Here..</h2>
+        
+        <form>
+            <input type="text" placeholder="Enter Your Name">
+            <input type="email" placeholder="me@example.com" required>
+            <textarea placeholder="Message...." required></textarea> 
     
-    </div>
-     <div class="row">
-        <div class="r-imagebox">
-            <img src="image/scratch2.jpg">
-        </div>
-        <div class="l-text-box">
-             <h2> Gun and Bullet</h2>
-             <p class="paragraph"> In this game you have to press space bar to release a bullet to kill the dragon.</p>
-             <a href="gunandbullet.html"class="btn">Play Game</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="l-imagebox">
-            <img src="image/scratch3.jpg">
-        </div>
-        <div class="r-text-box">
-            <h2>Space</h2>
-            <p>In this game, you have fly through space in a thrilling expidition</p>
-            <a href="space.html"class="btn">Play Game</a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="r-imagebox">
-            <img src="image/scratch4.jpg">
-        </div>
-        <div class="l-text-box">
-            <h2>Fruit Basket</h2>
-            <p>In this game, you bhave to collect the apples in the basket so they don't go to waste</p>
-            <a href="fruitbasket.html" class="btn">Play Game</a>
-        </div>
 
-
-
+    <input type="Submit" value="Submit">
+        </form>
+        
 
     </div>
 
 
 
-    </div>
 </section>
     </main>
 
